@@ -24,3 +24,5 @@ Sandra - laukums
 ===
 Kods cenšamies Angliski
 Spēle Latviski
+
+Veiksmi darbā :)
