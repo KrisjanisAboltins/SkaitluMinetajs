@@ -22,7 +22,7 @@ Jekaterina - lietotāja dati
 Sandra - laukums 
 
 ===
-Kods cenšamies Angliski
+Kods cenšamies Angliski;
 Spēle Latviski
 
 Veiksmi darbā :)
