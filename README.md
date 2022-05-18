@@ -13,5 +13,14 @@ Punktu skaitīšanas sistēma (ja atmin piem 5 gājienos?) tad 5 punkti, ja 10 g
 
 vai var ierobežot minēšanas skaitu? -> var
 
-Krišjānis - saveicināšanās daļa 
-Loģika pa klasēm 
+Krišjānis - saveicināšanās daļa + loģika pa klasēm un tests pirmie skaitļi 
+
+Linda - spēles noteikumi 
+
+Jekaterina - lietotāja dati
+
+- laukums 
+
+===
+Kods cenšamies Angliski
+Spēle Latviski
