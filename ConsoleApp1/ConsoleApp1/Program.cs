@@ -19,3 +19,4 @@ Console.WriteLine($"Tu ierakstīji skaitli {skaitlis11Number}, skaitlis ir parei
 
 Console.WriteLine($"Vai Tu vēlies pāriet uz nākamo līmeni");
 
+ //xxx 
