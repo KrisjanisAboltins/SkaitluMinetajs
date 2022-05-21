@@ -9,8 +9,10 @@ Console.WriteLine($"Prieks iepazīties, {userName} šī ir " +
 
 Console.WriteLine("Tad sākam :)!");
 
+Random random1 = new Random();
+int randSecretNumber1 = random1.Next(1, 6);
 
-string secretNumber1 = "3";
+string secretNumber1 = randSecretNumber1.ToString();
 string guess = "";
 int guessCount = 0;
 int guessCountLimit = 3;
@@ -39,8 +41,8 @@ Console.WriteLine();
 
 Console.WriteLine("Nākamā spēle, gadījuma skaitlis no 1 līdz 10");
 { 
-Random random = new Random();
-int randomNumber1to10 = random.Next(1, 11);
+Random random2 = new Random();
+int randomNumber1to10 = random2.Next(1, 11);
 int guess1to10;
 int guessCountLimit1to10 = 5;
 bool reachedguessCountLimit1to10 = false;
