@@ -3,8 +3,8 @@
 
 
 
-Console.WriteLine("Labvakar");
-Console.WriteLine("Šī ir skaitļu minēšanas spēle");
+Console.WriteLine("Labdien,");
+Console.WriteLine("šī ir skaitļu minēšanas spēle");
 
 Console.WriteLine("Lūdzu, ieraksti skaitli no 1 līdz 10");
 
