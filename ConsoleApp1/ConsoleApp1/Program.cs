@@ -1,22 +1,36 @@
 ﻿
-// 
-
 
 
 Console.WriteLine("Labdien,");
-Console.WriteLine("šī ir skaitļu minēšanas spēle");
+Console.WriteLine("Kā tevi sauc?");
+string userName = Console.ReadLine();
+Console.WriteLine($"Prieks iepazīties, {userName} šī ir " +
+    $"mācību nolūkos izveidotā skaitļu minēšanas spēle");
 
-Console.WriteLine("Lūdzu, ieraksti skaitli no 1 līdz 10");
+Console.WriteLine("Tad sākam :)!");
 
-string skaitlis1 = Console.ReadLine();
 
-string skaitlis1Text = Console.ReadLine();
-int skaitlis11Number = int.Parse(skaitlis1Text);
+string secretNumber1 = "3";
+string guess = "";
+int guessCount = 0;
+int guessCountLimit = 5;
+bool reachedguessCountLimit = false;
 
-Console.WriteLine($"Tu ierakstīji skaitli {skaitlis11Number}, skaitlis nav pareizs mini vēlreiz");
+while (guess != secretNumber1 && !reachedguessCountLimit)
+{
+    if (guessCount < guessCountLimit)
+    {
+        Console.WriteLine("mini skaitli no 1 līdz 10, Tev kopā ir piecas iespējas");
+        guess = Console.ReadLine();
+        guessCount++;
+    }
+    else reachedguessCountLimit = true;
+}
+if (reachedguessCountLimit) Console.WriteLine("Sasniegts skaitļu minēšans limits, diemžēl tu zaudēji :(");
 
-Console.WriteLine($"Tu ierakstīji skaitli {skaitlis11Number}, skaitlis ir pareizs, TU UZMINĒJI :)");
 
-Console.WriteLine($"Vai Tu vēlies pāriet uz nākamo līmeni");
+else Console.WriteLine($":):):) " +
+    $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, TU UZMINĒJI!");
 
- //xxx 
+
+Console.WriteLine("================================================================================");
