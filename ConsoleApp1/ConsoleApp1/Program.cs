@@ -2,7 +2,7 @@
 
 
 Console.WriteLine("Labdien,");
-Console.WriteLine("Kā tevi sauc?");
+Console.WriteLine("Ļūdzu ieraksti kā Tevi sauc?");
 string userName = Console.ReadLine();
 Console.WriteLine($"Prieks iepazīties, {userName} šī ir " +
     $"mācību nolūkos izveidotā skaitļu minēšanas spēle");
@@ -22,22 +22,22 @@ while (guess != secretNumber1 && !reachedguessCountLimit)
 {
     if (guessCount < guessCountLimit)
     {
-        Console.WriteLine($"{userName}, mini skaitli no 1 līdz 5, Tev kopā ir 3 iespējas");
+        Console.WriteLine($"{userName}, lūdzu, ieraksti savu skaitli no 1 līdz 5, ja nebūs pareizi būs jāraksta vēl :)");
         guess = Console.ReadLine();
         guessCount++;
     }
     else reachedguessCountLimit = true;
 }
 
-if (reachedguessCountLimit) Console.WriteLine("Sasniegts skaitļu minēšans limits, diemžēl tu zaudēji :(");
+if (reachedguessCountLimit) Console.WriteLine($"Sasniegts skaitļu minēšans limits {guessCountLimit} , diemžēl tu zaudēji :(");
 
 else Console.WriteLine($":):):) " +
     $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, {userName}, TU UZMINĒJI!");
 
-Console.WriteLine();
-Console.WriteLine("================================================================================");
-Console.WriteLine();
-Console.WriteLine();
+//Console.WriteLine();
+//Console.WriteLine("================================================================================");
+//Console.WriteLine();
+
 
 Console.WriteLine("Nākamā spēle, gadījuma skaitlis no 1 līdz 10");
 { 
@@ -48,7 +48,7 @@ int guessCountLimit1to10 = 5;
 bool reachedguessCountLimit1to10 = false;
 
 Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 10");
-Console.WriteLine($"{userName}, lūdzu, uzmini. tev ir {guessCountLimit1to10} iespējas");
+Console.WriteLine($"{userName}, lūdzu, ieraksti veselu skaitli, Tev ir {guessCountLimit1to10} iespējas");
 
 while (reachedguessCountLimit1to10 == false)
 {
@@ -66,16 +66,16 @@ while (reachedguessCountLimit1to10 == false)
         $"Tu ierakstīji skaitli {randomNumber1to10}, skaitlis ir pareizs, {userName}, TU UZMINĒJI!");
         reachedguessCountLimit1to10 = true;
     }
-    else if (guess1to10 > randomNumber1to10) Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir mazāks");
-    else if (guess1to10 < randomNumber1to10) Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir lielāks");
+    else if (guess1to10 > randomNumber1to10) Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir mazāks, mēģini vēlrez ierakstīt savu skaitli");
+    else if (guess1to10 < randomNumber1to10) Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir lielāks, mēģini vēlrez ierakstīt savu skaitli");
 }
     Console.ReadLine();
 }
 
-Console.WriteLine();
-Console.WriteLine("================================================================================");
-Console.WriteLine();
-Console.WriteLine();
+//Console.WriteLine();
+//Console.WriteLine("================================================================================");
+//Console.WriteLine();
+
 
 
 Console.WriteLine($"Nākamā spēle, šoreiz grūtāka, {userName}, būs jātmin 1 skaitlis");
@@ -86,11 +86,11 @@ int guess1to20;
 int guessCountLimit1to20 = 7;
 bool reachedguessCountLimit1to20 = false;
 
-int advice1 = (randSecretNumber3 / 10);
-int advice2 = (randSecretNumber3 % 10);
+int advice1 = (randSecretNumber3 / 7);
+int advice2 = (randSecretNumber3 % 7);
 
 Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 500, bet es Tev nedaudz palīdzēšu");
-Console.WriteLine($"Lūdzu, uzmini. tev ir {guessCountLimit1to20} iespējas");
+Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, Tev ir {guessCountLimit1to20} iespējas");
 {
 
     while (reachedguessCountLimit1to20 == false)
@@ -110,10 +110,10 @@ Console.WriteLine($"Lūdzu, uzmini. tev ir {guessCountLimit1to20} iespējas");
             reachedguessCountLimit1to20 = true;
         }
         else if (guess1to20 > randSecretNumber3) Console.WriteLine($"Es Tev nedaudz palīdzēšu, Mans skaitlis ir mazāks, " +
-            "to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}");
+            "to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}, mēģini vēlrez ierakstīt savu skaitli");
         
         else if (guess1to20 < randSecretNumber3) Console.WriteLine($"Mans skaitlis ir lielāks, " +
-            $"to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}");
+            $"to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}, mēģini vēlrez ierakstīt savu skaitli");
     }
     Console.ReadLine();
 }
