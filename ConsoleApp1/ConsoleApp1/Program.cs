@@ -1,29 +1,44 @@
 ﻿
+
+using ConsoleApp1;
+
+Rules SkaitluMinetajs = new Rules();
+
+SkaitluMinetajs.Greeting();
+
+Console.WriteLine("Matrix ir izvēlējies skaitli.");
+Console.WriteLine("Tavs uzdevums ir to atminēt.");
+Console.WriteLine("Matrix tev dos mājienu, ja tavs ievadītais skaitlis ir par lielu vai par mazu.");
+Console.WriteLine("Lūdzu seko tam, cik mēģinājumi tev ir palikuši!");
+
+
+
+
 //piedāvāju, ka izveidojam klasi Player, kur definējam visus spēlētāju raksturlielumus
 //(šobrīd ieliku vārdu, vecumu, mēģinājumu skaitu, iegūtos punktus (ja izlemsim tos skaitīt)
 //un uzvaras). In tad uzreiz katra spēlētāja info saglabāsim un varēsim izmantot.
 //Ja pareizi saprotu, programmas failā tas izskatītos apmēram šādi:
-using ConsoleApp1
-    { 
+using ConsoleApp1;
+    {
 
     Player user1 = new Player();
-    user1.Name = "";
-    user1.Age = 0; // ievades dati laikam jāpārbauda, lai int tiešām ir int nevis string
-    user1.Attempts = 0; //šie nākamie trīs iegūsies spēlēs laikā un mums tos vajadzēs kaut kā uzkrāt
-    user1.Points = 0;
-    user1.Wins = 0;
+user1.Name = "";
+user1.Age = 0; // ievades dati laikam jāpārbauda, lai int tiešām ir int nevis string
+user1.Attempts = 0; //šie nākamie trīs iegūsies spēlēs laikā un mums tos vajadzēs kaut kā uzkrāt
+user1.Points = 0;
+user1.Wins = 0;
 
-    Player user2 = new Player();
-    user2.Name = "";
-    user2.Age = 0;
-    user2.Attempts = 0;
-    user2.Points = 0;
-    user2.Wins = 0;
-    // utt. varam definēt spēlētāju skaitu vai jāizdomā, vai var būt neierobežots.
-    // Saprotu, ka ja gribam vairākus spēlētājus un pēc tam arī visu ko darīt ar šiem
-    //datiem, tad Krišjāņa kodā jālieto piemēram, 34 rindā nevis userName, bet user1.
-    // šis jau sāk palikt sarežģītāk, jo kodā uzreiz arī jāpiedefinē mēģinājumu skaits
-    //pirmajam spēlētājam tas būtu user1.Attempts, utt.
+Player user2 = new Player();
+user2.Name = "";
+user2.Age = 0;
+user2.Attempts = 0;
+user2.Points = 0;
+user2.Wins = 0;
+// utt. varam definēt spēlētāju skaitu vai jāizdomā, vai var būt neierobežots.
+// Saprotu, ka ja gribam vairākus spēlētājus un pēc tam arī visu ko darīt ar šiem
+//datiem, tad Krišjāņa kodā jālieto piemēram, 34 rindā nevis userName, bet user1.
+// šis jau sāk palikt sarežģītāk, jo kodā uzreiz arī jāpiedefinē mēģinājumu skaits
+//pirmajam spēlētājam tas būtu user1.Attempts, utt.
 
 
 }
@@ -68,42 +83,42 @@ else Console.WriteLine($":):):) " +
 //Console.WriteLine();
 
 
-Console.WriteLine("Nākamā spēle, gadījuma skaitlis no 1 līdz 10");
-{ 
-Random random2 = new Random();
-int randomNumber1to10 = random2.Next(1, 11);
-int guess1to10;
-int guessCountLimit1to10 = 5;
-bool reachedguessCountLimit1to10 = false;
-
-Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 10");
-Console.WriteLine($"{userName}, lūdzu, ieraksti veselu skaitli, Tev ir {guessCountLimit1to10} iespējas");
-
-while (reachedguessCountLimit1to10 == false)
+console.writeline("nākamā spēle, gadījuma skaitlis no 1 līdz 10");
 {
-    guess1to10 = int.Parse(Console.ReadLine());
-    guessCountLimit1to10--;
+    random random2 = new random();
+    int randomnumber1to10 = random2.next(1, 11);
+    int guess1to10;
+    int guesscountlimit1to10 = 5;
+    bool reachedguesscountlimit1to10 = false;
 
-    if (guessCountLimit1to10 != randomNumber1to10 && guessCountLimit1to10 == 0)
+    console.writeline("es iedomājos veselu skaitli no 1 līdz 10");
+    console.writeline($"{username}, lūdzu, ieraksti veselu skaitli, tev ir {guesscountlimit1to10} iespējas");
+
+    while (reachedguesscountlimit1to10 == false)
     {
-        Console.WriteLine($"Tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randomNumber1to10}");
-        reachedguessCountLimit1to10 = true;
+        guess1to10 = int.parse(console.readline());
+        guesscountlimit1to10--;
+
+        if (guesscountlimit1to10 != randomnumber1to10 && guesscountlimit1to10 == 0)
+        {
+            console.writeline($"tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randomnumber1to10}");
+            reachedguesscountlimit1to10 = true;
+        }
+        else if (guess1to10 == randomnumber1to10)
+        {
+            console.writeline($":):):) " +
+            $"tu ierakstīji skaitli {randomnumber1to10}, skaitlis ir pareizs, {username}, tu uzminēji!");
+            reachedguesscountlimit1to10 = true;
+        }
+        else if (guess1to10 > randomnumber1to10) console.writeline("es tev nedaudz palīdzēšu, mans skaitlis ir mazāks, mēģini vēlrez ierakstīt savu skaitli");
+        else if (guess1to10 < randomnumber1to10) console.writeline("es tev nedaudz palīdzēšu, mans skaitlis ir lielāks, mēģini vēlrez ierakstīt savu skaitli");
     }
-    else if (guess1to10 == randomNumber1to10)
-    {
-        Console.WriteLine($":):):) " +
-        $"Tu ierakstīji skaitli {randomNumber1to10}, skaitlis ir pareizs, {userName}, TU UZMINĒJI!");
-        reachedguessCountLimit1to10 = true;
-    }
-    else if (guess1to10 > randomNumber1to10) Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir mazāks, mēģini vēlrez ierakstīt savu skaitli");
-    else if (guess1to10 < randomNumber1to10) Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir lielāks, mēģini vēlrez ierakstīt savu skaitli");
-}
-    Console.ReadLine();
+    console.readline();
 }
 
-//Console.WriteLine();
-//Console.WriteLine("================================================================================");
-//Console.WriteLine();
+//console.writeline();
+//console.writeline("================================================================================");
+//console.writeline();
 
 
 
@@ -140,7 +155,7 @@ Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, Tev ir {guessCountLimit1to2
         }
         else if (guess1to20 > randSecretNumber3) Console.WriteLine($"Es Tev nedaudz palīdzēšu, Mans skaitlis ir mazāks, " +
             "to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}, mēģini vēlrez ierakstīt savu skaitli");
-        
+
         else if (guess1to20 < randSecretNumber3) Console.WriteLine($"Mans skaitlis ir lielāks, " +
             $"to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}, mēģini vēlrez ierakstīt savu skaitli");
     }
