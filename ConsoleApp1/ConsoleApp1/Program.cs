@@ -92,7 +92,7 @@ Console.WriteLine("nākamā spēle, gadījuma skaitlis no 1 līdz 10");
     bool reachedguesscountlimit1to10 = false;
 
     Console.WriteLine("es iedomājos veselu skaitli no 1 līdz 10");
-    Console.WriteLine($"{username}, lūdzu, ieraksti veselu skaitli, tev ir {guesscountlimit1to10} iespējas");
+    Console.WriteLine($"{userName}, lūdzu, ieraksti veselu skaitli, tev ir {guesscountlimit1to10} iespējas");
 
     while (reachedguesscountlimit1to10 == false)
     {
@@ -107,7 +107,7 @@ Console.WriteLine("nākamā spēle, gadījuma skaitlis no 1 līdz 10");
         else if (guess1to10 == randomnumber1to10)
         {
             Console.WriteLine($":):):) " +
-            $"tu ierakstīji skaitli {randomnumber1to10}, skaitlis ir pareizs, {username}, tu uzminēji!");
+            $"tu ierakstīji skaitli {randomnumber1to10}, skaitlis ir pareizs, {userName}, tu uzminēji!");
             reachedguesscountlimit1to10 = true;
         }
         else if (guess1to10 > randomnumber1to10) Console.WriteLine("es tev nedaudz palīdzēšu, mans skaitlis ir mazāks, mēģini vēlrez ierakstīt savu skaitli");
