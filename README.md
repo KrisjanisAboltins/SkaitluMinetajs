@@ -25,4 +25,23 @@ Sandra - laukums
 Kods cenšamies Angliski;
 Spēle Latviski
 
+
+
+update 25 maijs
+focus uz klasēm 
+
+Sandra - Player klase (vārds, mēģinājumu skaits, count ++)
+
+Krišjānis - GameBoard klase - spēles loģika, visi izvades texti, Skaitļu mendedzēris un vai lietotājs atminēja, vai skaitlis ir par lielu vai par mazu
+1 while cikls un tiek iedoti parametri (Lietotājs minēs , Lietotājs minēs ..)
+
+Linda - Konstantes/statiska klase
+
+Jekaterina - 5 lekcijas piemērs 
+
+
 Veiksmi darbā :)
+
+
+
+
