@@ -9,7 +9,7 @@ SkaitluMinetajs.Greeting();
 Console.WriteLine("Matrix ir izvēlējies skaitli.");
 Console.WriteLine("Tavs uzdevums ir to atminēt.");
 Console.WriteLine("Matrix tev dos mājienu, ja tavs ievadītais skaitlis ir par lielu vai par mazu.");
-Console.WriteLine("Lūdzu seko tam, cik mēģinājumi tev ir palikuši!");
+Console.WriteLine("Lūdzu seko tam, cik mēģinājumi tev ir atlikuši!");
 
 
 
@@ -18,7 +18,7 @@ Console.WriteLine("Lūdzu seko tam, cik mēģinājumi tev ir palikuši!");
 //(šobrīd ieliku vārdu, vecumu, mēģinājumu skaitu, iegūtos punktus (ja izlemsim tos skaitīt)
 //un uzvaras). In tad uzreiz katra spēlētāja info saglabāsim un varēsim izmantot.
 //Ja pareizi saprotu, programmas failā tas izskatītos apmēram šādi:
-using ConsoleApp1;
+
     {
 
     Player user1 = new Player();
@@ -83,37 +83,37 @@ else Console.WriteLine($":):):) " +
 //Console.WriteLine();
 
 
-console.writeline("nākamā spēle, gadījuma skaitlis no 1 līdz 10");
+Console.WriteLine("nākamā spēle, gadījuma skaitlis no 1 līdz 10");
 {
-    random random2 = new random();
-    int randomnumber1to10 = random2.next(1, 11);
+    Random random2 = new Random();
+    int randomnumber1to10 = random2.Next(1, 11);
     int guess1to10;
     int guesscountlimit1to10 = 5;
     bool reachedguesscountlimit1to10 = false;
 
-    console.writeline("es iedomājos veselu skaitli no 1 līdz 10");
-    console.writeline($"{username}, lūdzu, ieraksti veselu skaitli, tev ir {guesscountlimit1to10} iespējas");
+    Console.WriteLine("es iedomājos veselu skaitli no 1 līdz 10");
+    Console.WriteLine($"{username}, lūdzu, ieraksti veselu skaitli, tev ir {guesscountlimit1to10} iespējas");
 
     while (reachedguesscountlimit1to10 == false)
     {
-        guess1to10 = int.parse(console.readline());
+        guess1to10 = int.Parse(Console.ReadLine());
         guesscountlimit1to10--;
 
         if (guesscountlimit1to10 != randomnumber1to10 && guesscountlimit1to10 == 0)
         {
-            console.writeline($"tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randomnumber1to10}");
+            Console.WriteLine($"tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randomnumber1to10}");
             reachedguesscountlimit1to10 = true;
         }
         else if (guess1to10 == randomnumber1to10)
         {
-            console.writeline($":):):) " +
+            Console.WriteLine($":):):) " +
             $"tu ierakstīji skaitli {randomnumber1to10}, skaitlis ir pareizs, {username}, tu uzminēji!");
             reachedguesscountlimit1to10 = true;
         }
-        else if (guess1to10 > randomnumber1to10) console.writeline("es tev nedaudz palīdzēšu, mans skaitlis ir mazāks, mēģini vēlrez ierakstīt savu skaitli");
-        else if (guess1to10 < randomnumber1to10) console.writeline("es tev nedaudz palīdzēšu, mans skaitlis ir lielāks, mēģini vēlrez ierakstīt savu skaitli");
+        else if (guess1to10 > randomnumber1to10) Console.WriteLine("es tev nedaudz palīdzēšu, mans skaitlis ir mazāks, mēģini vēlrez ierakstīt savu skaitli");
+        else if (guess1to10 < randomnumber1to10) Console.WriteLine("es tev nedaudz palīdzēšu, mans skaitlis ir lielāks, mēģini vēlrez ierakstīt savu skaitli");
     }
-    console.readline();
+    Console.ReadLine();
 }
 
 //console.writeline();
