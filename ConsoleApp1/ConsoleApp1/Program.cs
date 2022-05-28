@@ -62,14 +62,14 @@ ConsoleApp1.GameBoard board = new GameBoard();
 
 board.GameBoardGreeting();
 
-board.Game1Board();
+board.Game_1Board();
 
 Console.WriteLine();
 Console.WriteLine("================================================================================");
 Console.WriteLine();
 
 
-Console.WriteLine("nākamā spēle, gadījuma skaitlis no 1 līdz 10");
+Console.WriteLine("Nākamā spēle, gadījuma skaitlis no 1 līdz 10");
 {
     Random random2 = new Random();
     int randomnumber1to10 = random2.Next(1, 11);
@@ -77,7 +77,7 @@ Console.WriteLine("nākamā spēle, gadījuma skaitlis no 1 līdz 10");
     int guesscountlimit1to10 = 5;
     bool reachedguesscountlimit1to10 = false;
 
-    Console.WriteLine("es iedomājos veselu skaitli no 1 līdz 10");
+    Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 10");
     Console.WriteLine($"{userName}, lūdzu, ieraksti veselu skaitli, tev ir {guesscountlimit1to10} iespējas");
 
     while (reachedguesscountlimit1to10 == false)

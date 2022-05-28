@@ -20,7 +20,7 @@ namespace ConsoleApp1
 
         
 
-        public void Game1Board()
+        public void Game_1Board()
         {
 
             Random random1 = new Random();
@@ -50,6 +50,9 @@ namespace ConsoleApp1
             $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, TU UZMINĒJI!");
 
         }
+
+
+
 
 
 
