@@ -47,7 +47,7 @@ Console.WriteLine("Lūdzu seko tam, cik mēģinājumi tev ir atlikuši!");
 
 
 Console.WriteLine("Labdien,");
-Console.WriteLine("Ļūdzu ieraksti kā Tevi sauc?");
+Console.WriteLine("Lūdzu ieraksti kā Tevi sauc?");
 string userName = Console.ReadLine();
 Console.WriteLine($"Prieks iepazīties, {userName} šī ir " +
     $"mācību nolūkos izveidotā skaitļu minēšanas spēle");
@@ -73,7 +73,6 @@ board.Game_2Board();
 Console.WriteLine();
 Console.WriteLine("================================================================================");
 Console.WriteLine();
-
 
 board.Game_3Board();
 

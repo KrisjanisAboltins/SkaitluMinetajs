@@ -55,47 +55,48 @@ namespace ConsoleApp1
         {
 
             Console.WriteLine("Nākamā spēle, gadījuma skaitlis no 1 līdz 10");
-            {
-                Random random2 = new Random();
-                int randomnumber1to10 = random2.Next(1, 11);
-                int guess1to10;
-                int guesscountlimit1to10 = 5;
-                bool reachedguesscountlimit1to10 = false;
+            
+            Random random2 = new Random();
+            int randomNumber1to10 = random2.Next(1, 11);
+            int guess1to10;
+            int guessCountLimit1to10 = 5;
+            bool reachedguessCountLimit1to10 = false;
 
-                Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 10");
-                Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, tev ir {guesscountlimit1to10} iespējas");
+             Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 10");
+             Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, Tev ir {guessCountLimit1to10} iespējas");
 
-                while (reachedguesscountlimit1to10 == false)
+             while (reachedguessCountLimit1to10 == false)
                 {
                     guess1to10 = int.Parse(Console.ReadLine());
-                    guesscountlimit1to10--;
+                    guessCountLimit1to10--;
 
-                    if (guesscountlimit1to10 != randomnumber1to10 && guesscountlimit1to10 == 0)
+                 if (guessCountLimit1to10 != randomNumber1to10 && guessCountLimit1to10 == 0)
                     {
-                        Console.WriteLine($"Tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randomnumber1to10}");
-                        reachedguesscountlimit1to10 = true;
+                        Console.WriteLine($"Tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randomNumber1to10}");
+                        reachedguessCountLimit1to10 = true;
                     }
-                    else if (guess1to10 == randomnumber1to10)
+                 else if (guess1to10 == randomNumber1to10)
                     {
                         Console.WriteLine($":):):) " +
-                        $"Tu ierakstīji skaitli {randomnumber1to10}, skaitlis ir pareizs, tu uzminēji!");
-                        reachedguesscountlimit1to10 = true;
+                        $"Tu ierakstīji skaitli {randomNumber1to10}, skaitlis ir pareizs, TU UZMINĒJI!");
+                        reachedguessCountLimit1to10 = true;
                     }
-                    else if (guess1to10 > randomnumber1to10) Console.WriteLine("Es tev nedaudz palīdzēšu, mans skaitlis ir mazāks, mēģini vēlrez ierakstīt savu skaitli");
-                    else if (guess1to10 < randomnumber1to10) Console.WriteLine("Es tev nedaudz palīdzēšu, mans skaitlis ir lielāks, mēģini vēlrez ierakstīt savu skaitli");
+                 else if (guess1to10 > randomNumber1to10) Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir mazāks, mēģini vēlrez ierakstīt savu skaitli");
+                 else if (guess1to10 < randomNumber1to10) Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir lielāks, mēģini vēlrez ierakstīt savu skaitli");
                 }
-                Console.ReadLine();
-            }
-
-
+             Console.ReadLine();
+            
         }
+
+
+        
 
         public void Game_3Board() 
         {
             Console.WriteLine($"Nākamā spēle, šoreiz grūtāka, būs jātmin 1 skaitlis");
 
             Random random3 = new Random();
-            int randSecretNumber3 = random3.Next(1, 500);
+            int randSecretNumber3 = random3.Next(1, 501);
             int guess1to20;
             int guessCountLimit1to20 = 7;
             bool reachedguessCountLimit1to20 = false;
