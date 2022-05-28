@@ -53,40 +53,20 @@ Console.WriteLine($"Prieks iepazīties, {userName} šī ir " +
     $"mācību nolūkos izveidotā skaitļu minēšanas spēle");
 
 
-//ConsoleApp1.GameBoard board = new GameBoard();
+Console.WriteLine();
+Console.WriteLine("================================================================================");
+Console.WriteLine();
 
-//board.GameBoardGreeting();
 
+ConsoleApp1.GameBoard board = new GameBoard();
 
+board.GameBoardGreeting();
 
-Random random1 = new Random();
-int randSecretNumber1 = random1.Next(1, 6);
+board.Game1Board();
 
-string secretNumber1 = randSecretNumber1.ToString();
-string guess = "";
-int guessCount = 0;
-int guessCountLimit = 3;
-bool reachedguessCountLimit = false;
-
-while (guess != secretNumber1 && !reachedguessCountLimit)
-{
-    if (guessCount < guessCountLimit)
-    {
-        Console.WriteLine($"{userName}, lūdzu, ieraksti savu skaitli no 1 līdz 5, ja nebūs pareizi būs jāraksta vēl :)");
-        guess = Console.ReadLine();
-        guessCount++;
-    }
-    else reachedguessCountLimit = true;
-}
-
-if (reachedguessCountLimit) Console.WriteLine($"Sasniegts skaitļu minēšans limits {guessCountLimit} , diemžēl tu zaudēji :(");
-
-else Console.WriteLine($":):):) " +
-    $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, {userName}, TU UZMINĒJI!");
-
-//Console.WriteLine();
-//Console.WriteLine("================================================================================");
-//Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("================================================================================");
+Console.WriteLine();
 
 
 Console.WriteLine("nākamā spēle, gadījuma skaitlis no 1 līdz 10");
