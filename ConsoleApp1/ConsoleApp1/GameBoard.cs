@@ -16,9 +16,7 @@ namespace ConsoleApp1
             Console.WriteLine("Tad sākam :)!");
         }
 
-
-
-        
+               
 
         public void Game_1Board()
         {
