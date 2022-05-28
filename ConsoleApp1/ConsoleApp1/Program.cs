@@ -56,3 +56,8 @@ Console.WriteLine($"Prieks iepazīties, {userName} šī ir " +
 Console.WriteLine();
 Console.WriteLine(========================================================================================================);
 Console.WriteLine();
+
+GameBoard board = new GameBoard();
+board.PersonGreeting();
+
+

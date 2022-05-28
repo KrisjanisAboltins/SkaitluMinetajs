@@ -1,11 +1,27 @@
 ﻿using System;
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{ 
+
+
 public class GameBoard
 {
 
-	Console.WriteLine("Tad sākam :)!");
+ public void PersonGreeting()
+        {
+            Console.WriteLine("Tad sākam :)!");
+        }
+	
 
-Console.WriteLine("Tad sākam :)!");
+
+
+
 
 Random random1 = new Random();
     int randSecretNumber1 = random1.Next(1, 6);
@@ -119,5 +135,7 @@ Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, Tev ir {guessCountLimit1to2
 
 
 
+
+}
 
 }
