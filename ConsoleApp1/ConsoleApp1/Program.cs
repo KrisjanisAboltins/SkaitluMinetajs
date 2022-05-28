@@ -52,7 +52,12 @@ string userName = Console.ReadLine();
 Console.WriteLine($"Prieks iepazīties, {userName} šī ir " +
     $"mācību nolūkos izveidotā skaitļu minēšanas spēle");
 
-Console.WriteLine("Tad sākam :)!");
+
+//ConsoleApp1.GameBoard board = new GameBoard();
+
+//board.GameBoardGreeting();
+
+
 
 Random random1 = new Random();
 int randSecretNumber1 = random1.Next(1, 6);
