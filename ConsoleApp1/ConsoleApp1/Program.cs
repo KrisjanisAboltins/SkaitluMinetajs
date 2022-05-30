@@ -3,13 +3,20 @@
 
 using ConsoleApp1;
 
+Rules.pattern(4,10);
+
+string gmName = Configuration.GameName;
+
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine(gmName);
+Console.ResetColor(); 
+
 Rules SkaitluMinetajs = new Rules();
 
 SkaitluMinetajs.Greeting();
 
 Console.WriteLine("Matrix ir izvēlējies skaitli.");
-Console.WriteLine("Tavs uzdevums ir to atminēt.");
-Console.WriteLine("Matrix tev dos mājienu, ja tavs ievadītais skaitlis ir par lielu vai par mazu.");
+Console.WriteLine("Tavs uzdevums ir to atminēt.Matrix tev dos mājienu, ja tavs ievadītais skaitlis ir par lielu vai par mazu.");
 Console.WriteLine("Lūdzu seko tam, cik mēģinājumi tev ir atlikuši!");
 
 
@@ -43,8 +50,6 @@ Console.WriteLine("Lūdzu seko tam, cik mēģinājumi tev ir atlikuši!");
 
 
 }
-
-
 
 Console.WriteLine("Labdien,");
 Console.WriteLine("Lūdzu ieraksti kā Tevi sauc?");
