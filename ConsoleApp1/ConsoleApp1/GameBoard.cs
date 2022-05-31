@@ -46,7 +46,7 @@ namespace ConsoleApp1
 
             else Console.WriteLine($":):):) " +
             $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, TU UZMINĒJI!");
-
+            
         }
 
         public void Game_2Board()
