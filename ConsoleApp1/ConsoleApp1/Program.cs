@@ -16,10 +16,10 @@ Rules SkaitluMinetajs = new Rules();
 
 SkaitluMinetajs.Greeting();
 
-Console.WriteLine("Šī ir mācību nolūkos izveidotā skaitļu minēšanas spēle");
-Console.WriteLine("Matrix ir izvēlējies skaitli.");
-Console.WriteLine("Tavs uzdevums ir to atminēt.Matrix tev dos mājienu, ja tavs ievadītais skaitlis ir par lielu vai par mazu.");
-Console.WriteLine("Lūdzu seko tam, cik mēģinājumi tev ir atlikuši!");
+Console.WriteLine("Šī ir mācību nolūkos izveidotā skaitļu minēšanas spēle.");
+Console.WriteLine("Matrix ir izvēlējies skaitli un Tavs uzdevums ir to atminēt.");
+Console.WriteLine("Matrix tev dos mājienu, ja Tavs ievadītais skaitlis ir par lielu vai par mazu.");
+Console.WriteLine("Lūdzu seko tam, cik mēģinājumi Tev ir atlikuši!");
 
 
 

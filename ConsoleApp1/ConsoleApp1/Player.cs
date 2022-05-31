@@ -12,14 +12,14 @@ namespace ConsoleApp1
 
         public void GetPlayerName()
         {
-            Console.WriteLine("Lūdzu ieraksti savu vārdu");
+            Console.WriteLine("Sākam! Lūdzu ieraksti savu vārdu");
             string player = Console.ReadLine();
             Console.WriteLine($"Prieks iepazīties, {player}!");
         }
 
         public void CountAttempts() 
         {
-
+            
         }
     }
 
