@@ -6,14 +6,24 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Player
+    public class Player
     {
-        public string Name;     
-        public int Age { get; set; }    
-        public int Attempts { get; set; }   
 
-        public int Points { get; set; } 
 
-        public int Wins { get; set; }   
+        public void GetPlayerName()
+        {
+            Console.WriteLine("Lūdzu ieraksti savu vārdu");
+            string player = Console.ReadLine();
+            Console.WriteLine($"Prieks iepazīties, {player}!");
+        }
+
+        public void CountAttempts() 
+        {
+
+        }
     }
+
 }
+
+
+
