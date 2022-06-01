@@ -45,4 +45,12 @@ Veiksmi darbā :)
 update 1 jūnijs
 mājas darbs  1-2 unit testi gala darbam 
 
+Linda - Nobeigums (nomainīt gala Console.WriteLine..), par vizuālo
+
+Jekaterina - turpina ar ar "5 lekcijas piemērs" + spēles līmeņi
+Krišjānis - GameBoard klase - spēles loģika + apvienot
+
+Mājas darbs unit tests gala darbam, kā min notestēstēt konstantes vērtību (ideāli Game boardā funkcija (piem. atgriež tekstu)).
+
+
 
