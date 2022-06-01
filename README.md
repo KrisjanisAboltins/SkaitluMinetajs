@@ -45,4 +45,6 @@ Veiksmi darbā :)
 update 1 jūnijs
 mājas darbs  1-2 unit testi gala darbam 
 
+Linda - Nobeigums (nomainīt gala Console.WriteLine..)
+
 
