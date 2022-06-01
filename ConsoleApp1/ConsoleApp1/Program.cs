@@ -4,7 +4,7 @@
 using ConsoleApp1;
 
 
-Rules.pattern(4,10);
+Rules.pattern(4,14);
 
 string gmName = Configuration.GameName;
 
