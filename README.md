@@ -42,6 +42,7 @@ Jekaterina - 5 lekcijas piemērs
 
 Veiksmi darbā :)
 
-
+update 1 jūnijs
+mājas darbs  1-2 unit testi gala darbam 
 
 
