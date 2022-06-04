@@ -8,7 +8,7 @@ Rules.pattern(4,14);
 
 string gmName = Configuration.GameName;
 
-Console.ForegroundColor = ConsoleColor.Red;
+Console.ForegroundColor = ConsoleColor.DarkMagenta;
 Console.WriteLine(gmName);
 Console.ResetColor(); 
 
