@@ -3,12 +3,11 @@
 
 using ConsoleApp1;
 
-
 Rules.pattern(4,14);
 
 string gmName = Configuration.GameName;
 
-Console.ForegroundColor = ConsoleColor.DarkMagenta;
+Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine(gmName);
 Console.ResetColor(); 
 
@@ -22,16 +21,14 @@ Console.WriteLine("Matrix tev dos mājienu, ja Tavs ievadītais skaitlis ir par 
 Console.WriteLine("Lūdzu seko tam, cik mēģinājumi Tev ir atlikuši!");
 
 
-
-Player player = new Player();
-
-player.GetPlayerName();
- 
+string player = Player.GetPlayerName();
 
 
+Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine();
 Console.WriteLine("================================================================================");
 Console.WriteLine();
+Console.ResetColor();
 
 
 ConsoleApp1.GameBoard board = new GameBoard();
@@ -40,21 +37,36 @@ board.GameBoardGreeting();
 
 board.Game_1Board();
 
+Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine();
 Console.WriteLine("================================================================================");
 Console.WriteLine();
+Console.ResetColor();
 
 board.Game_2Board();
 
+Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine();
 Console.WriteLine("================================================================================");
 Console.WriteLine();
+Console.ResetColor();
 
 board.Game_3Board();
 
+Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine();
 Console.WriteLine("================================================================================");
 Console.WriteLine();
+Console.ResetColor();
+
+//VĒl JĀPASTRĀDĀ pie šī varianta
+//Console.WriteLine($"{player}, vai vēlies spēlēt no jauna? JĀ/ Nē!");
+//string answer = Console.ReadLine();
+//if (answer != "y")
+//{
+//    retry = false;
+//}
+//break;
 
 Console.WriteLine($"{player}, paldies par spēli :)");
 

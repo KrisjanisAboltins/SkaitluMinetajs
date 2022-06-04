@@ -42,11 +42,20 @@ namespace ConsoleApp1
                 else reachedguessCountLimit = true;
             }
 
-            if (reachedguessCountLimit) Console.WriteLine($"Sasniegts skaitļu minēšans limits {guessCountLimit} , diemžēl tu zaudēji :(");
-
-            else Console.WriteLine($":):):) " +
-            $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, TU UZMINĒJI!");
-            
+            if (reachedguessCountLimit)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Sasniegts skaitļu minēšans limits {guessCountLimit} , diemžēl tu zaudēji :(");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine($":):):) " +
+                $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, TU UZMINĒJI!");
+                Console.ResetColor();
+            }
+                
         }
 
         public void Game_2Board()
@@ -69,16 +78,24 @@ namespace ConsoleApp1
                     guess1to10 = int.Parse(Console.ReadLine());
                     guessCountLimit1to10--;
 
-                    if (guessCountLimit1to10 != randomNumber1to10 && guessCountLimit1to10 == 0)
+                    if (guess1to10 == randomNumber1to10)
+                    //(guessCountLimit1to10 != randomNumber1to10 && guessCountLimit1to10 == 0)
                     {
-                        Console.WriteLine($"Tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randomNumber1to10}");
-                        reachedguessCountLimit1to10 = true;
-                    }
-                    else if (guess1to10 == randomNumber1to10)
-                    {
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine($":):):) " +
                         $"Tu ierakstīji skaitli {randomNumber1to10}, skaitlis ir pareizs, TU UZMINĒJI!");
                         reachedguessCountLimit1to10 = true;
+                        Console.ResetColor();
+
+                    }
+                    else if (guessCountLimit1to10 != randomNumber1to10 && guessCountLimit1to10 == 0)
+                    //(guess1to10 == randomNumber1to10)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"Tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randomNumber1to10}");
+                        reachedguessCountLimit1to10 = true;
+                        Console.ResetColor();
+
                     }
                     else if (guess1to10 > randomNumber1to10) Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir mazāks, mēģini vēlrez ierakstīt savu skaitli");
                     else Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir lielāks, mēģini vēlrez ierakstīt savu skaitli");
@@ -113,18 +130,22 @@ namespace ConsoleApp1
                     guess1to20 = int.Parse(Console.ReadLine());
                     guessCountLimit1to20--;
 
-                    if (guessCountLimit1to20 != randSecretNumber3 && guessCountLimit1to20 == 0)
+                    if (guess1to20 == randSecretNumber3)
                     {
-                        Console.WriteLine($"Tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randSecretNumber3}");
-                        reachedguessCountLimit1to20 = true;
-                    }
-                    else if (guess1to20 == randSecretNumber3)
-                    {
-                        Console.WriteLine($":):):) " +
-                        $"Tu ierakstīji skaitli {randSecretNumber3}, skaitlis ir pareizs, TU UZMINĒJI!");
-                        reachedguessCountLimit1to20 = true;
-                    }
-                    else if (guess1to20 > randSecretNumber3) Console.WriteLine($"Es Tev nedaudz palīdzēšu, Mans skaitlis ir mazāks, " +
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine($":):):) " +
+                    $"Tu ierakstīji skaitli {randSecretNumber3}, skaitlis ir pareizs, TU UZMINĒJI!");
+                    reachedguessCountLimit1to20 = true;
+                    Console.ResetColor();
+                }
+                else if (guessCountLimit1to20 != randSecretNumber3 && guessCountLimit1to20 == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"Tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randSecretNumber3}");
+                    reachedguessCountLimit1to20 = true;
+                    Console.ResetColor();
+                }
+                else if (guess1to20 > randSecretNumber3) Console.WriteLine($"Es Tev nedaudz palīdzēšu, Mans skaitlis ir mazāks, " +
                         $"to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}, mēģini vēlrez ierakstīt savu skaitli");
 
                     else Console.WriteLine($"Es Tev nedaudz palīdzēšu, Mans skaitlis ir lielāks, " +
@@ -140,3 +161,4 @@ namespace ConsoleApp1
     }
 
 }
+
