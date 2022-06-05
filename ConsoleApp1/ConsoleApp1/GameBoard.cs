@@ -52,7 +52,7 @@ namespace ConsoleApp1
             {
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine($":):):) " +
-                $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, TU UZMINĒJI!");
+                $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, Tu minēji {guessCount} reizes un TU UZMINĒJI!");
                 Console.ResetColor();
             }
                 
