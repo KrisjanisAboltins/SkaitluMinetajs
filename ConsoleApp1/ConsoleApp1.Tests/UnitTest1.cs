@@ -15,15 +15,7 @@ namespace ConsoleApp1.Tests
             //Assert
             Assert.Equal ("Matrix Skaitļu Minētājs", Configuration.GameName);
         }
-    }
-    public class GameBoardTests
-    {
-        [Fact]
-        public void LimitIsReached() 
-        {
-            int guessCount = 3;
-            
-    }
 
+       
     }
 }

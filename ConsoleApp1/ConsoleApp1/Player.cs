@@ -21,7 +21,7 @@ namespace ConsoleApp1
         public void CountAttempts() 
         {
             //Console.WriteLine($"Paldies par spēli. Tu minēji {guessCount} reizes."); 
-            //šo piedāvāju likt Gameboard 49.rindiņā
+            
         }
     }
 

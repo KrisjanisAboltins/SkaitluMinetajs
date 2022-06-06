@@ -10,12 +10,8 @@ namespace ConsoleApp1
     {
 
 
-
-        public void GameBoardGreeting()
-        {
-            Console.WriteLine("Tad sākam :)!");
-        }
-
+        public string GameBoardGreeting { get { return GameBoardGreeting; } set { GameBoardGreeting = "Tad sākam :)!"; } }
+        
                
 
         public void Game_1Board()
