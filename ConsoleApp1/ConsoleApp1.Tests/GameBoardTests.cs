@@ -9,9 +9,8 @@ namespace ConsoleApp1.Tests
         {
             GameBoard board = new GameBoard();
 
-            Assert.Equal("Tad sākam :)!", board.GameBoardGreeting);
+            Assert.Equal("Tad sākam :)!", board.GameBoardGreeting());
         }
-
 
     }
 }

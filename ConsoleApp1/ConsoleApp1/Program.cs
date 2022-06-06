@@ -34,7 +34,7 @@ Console.ResetColor();
 ConsoleApp1.GameBoard board = new GameBoard();
 
 
-Console.WriteLine(board.GameBoardGreeting);
+Console.WriteLine(board.GameBoardGreeting());
 
 board.Game_1Board();
 

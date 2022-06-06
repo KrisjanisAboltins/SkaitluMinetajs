@@ -10,7 +10,8 @@ namespace ConsoleApp1
     {
 
 
-        public string GameBoardGreeting { get { return GameBoardGreeting; } set { GameBoardGreeting = "Tad sākam :)!"; } }
+        public string greeting = "Tad sākam :)!";
+        public string GameBoardGreeting() { return greeting; }  
         
                
 
