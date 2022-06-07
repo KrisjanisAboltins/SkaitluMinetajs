@@ -11,9 +11,11 @@ namespace ConsoleApp1
 
 
         public string greeting = "Tad sākam :)!";
-        public string GameBoardGreeting() { return greeting; }  
-        
-               
+        public string GameBoardGreeting() { return greeting; }
+
+        public string greeting2 = "Veiksmi!";
+        public string GameBoardGreeting2() { return greeting2; }
+
 
         public void Game_1Board()
         {
@@ -154,8 +156,9 @@ namespace ConsoleApp1
 
         }
 
-
+               
     }
 
 }
+
 

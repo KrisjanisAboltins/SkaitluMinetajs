@@ -12,5 +12,16 @@ namespace ConsoleApp1.Tests
             Assert.Equal("Tad sākam :)!", board.GameBoardGreeting());
         }
 
+
+        [Fact]
+        public void Get_WhenGameStarts_ThenGameBoardGreeting2IsCorrect()
+        {
+            GameBoard board = new GameBoard();
+
+            Assert.Equal("Veiksmi!", board.GameBoardGreeting2());
+        }
+
+
+
     }
 }

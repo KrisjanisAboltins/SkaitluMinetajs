@@ -36,6 +36,9 @@ ConsoleApp1.GameBoard board = new GameBoard();
 
 Console.WriteLine(board.GameBoardGreeting());
 
+Console.WriteLine(board.GameBoardGreeting2());
+
+
 board.Game_1Board();
 
 Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -70,5 +73,7 @@ Console.ResetColor();
 //break;
 
 Console.WriteLine($"{player}, paldies par spēli :)");
+
+
 
 
