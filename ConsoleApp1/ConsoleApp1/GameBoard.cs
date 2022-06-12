@@ -26,13 +26,17 @@ namespace ConsoleApp1
             string secretNumber1 = randSecretNumber1.ToString();
             string guess = "";
             int guessCount = 0;
-            int guessCountLimit = 3;
+
+            EnumLevel countLimit1 = EnumLevel.guessCountLimit;
+            int countLimit1Value = (int)countLimit1;
+
+            //int guessCountLimit = 3;
             bool reachedguessCountLimit = false;
 
 
             while (guess != secretNumber1 && !reachedguessCountLimit)
             {
-                if (guessCount < guessCountLimit)
+                if (guessCount < countLimit1Value)
                 {
                     Console.WriteLine($"Lūdzu, ieraksti savu skaitli no 1 līdz 5, ja nebūs pareizi būs jāraksta vēl :)");
                     guess = Console.ReadLine();
@@ -44,7 +48,7 @@ namespace ConsoleApp1
             if (reachedguessCountLimit)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Sasniegts skaitļu minēšans limits {guessCountLimit} , diemžēl tu zaudēji :(");
+                Console.WriteLine($"Sasniegts skaitļu minēšans limits {countLimit1Value} , diemžēl tu zaudēji :(");
                 Console.ResetColor();
             }
             else
@@ -66,16 +70,21 @@ namespace ConsoleApp1
                 Random random2 = new Random();
                 int randomNumber1to10 = random2.Next(1, 11);
                 int guess1to10;
-                int guessCountLimit1to10 = 5;
+
+                EnumLevel countLimit2 = EnumLevel.guessCountLimit1to10;
+                int countLimit2Value = (int)countLimit2;
+
+                //int guessCountLimit1to10 = 5;
+
                 bool reachedguessCountLimit1to10 = false;
 
                 Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 10");
-                Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, Tev ir {guessCountLimit1to10} iespējas");
+                Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, Tev ir {countLimit2Value} iespējas");
 
                 while (reachedguessCountLimit1to10 == false)
                 {
                     guess1to10 = int.Parse(Console.ReadLine());
-                    guessCountLimit1to10--;
+                    countLimit2Value--;
 
                     if (guess1to10 == randomNumber1to10)
                     //(guessCountLimit1to10 != randomNumber1to10 && guessCountLimit1to10 == 0)
@@ -87,7 +96,7 @@ namespace ConsoleApp1
                         Console.ResetColor();
 
                     }
-                    else if (guessCountLimit1to10 != randomNumber1to10 && guessCountLimit1to10 == 0)
+                    else if (countLimit2Value != randomNumber1to10 && countLimit2Value == 0)
                     //(guess1to10 == randomNumber1to10)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -115,19 +124,25 @@ namespace ConsoleApp1
             Random random3 = new Random();
             int randSecretNumber3 = random3.Next(1, 501);
             int guess1to20;
-            int guessCountLimit1to20 = 7;
+
+
+            EnumLevel countLimit3 = EnumLevel.guessCountLimit1to20;
+            int countLimit3Value = (int)countLimit3;
+
+            //int guessCountLimit1to20 = 7;
+
             bool reachedguessCountLimit1to20 = false;
 
             int advice1 = (randSecretNumber3 / 7);
             int advice2 = (randSecretNumber3 % 7);
 
             Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 500, bet es Tev nedaudz palīdzēšu");
-            Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, Tev ir {guessCountLimit1to20} iespējas");
+            Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, Tev ir {countLimit3Value} iespējas");
             
                 while (reachedguessCountLimit1to20 == false)
                 {
                     guess1to20 = int.Parse(Console.ReadLine());
-                    guessCountLimit1to20--;
+                    countLimit3Value--;
 
                     if (guess1to20 == randSecretNumber3)
                     {
@@ -137,7 +152,7 @@ namespace ConsoleApp1
                     reachedguessCountLimit1to20 = true;
                     Console.ResetColor();
                 }
-                else if (guessCountLimit1to20 != randSecretNumber3 && guessCountLimit1to20 == 0)
+                else if (countLimit3Value != randSecretNumber3 && countLimit3Value == 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"Tavu iespēju skaits ir beidzies, pareizais skaitslis bija {randSecretNumber3}");
