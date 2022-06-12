@@ -36,11 +36,11 @@ namespace ConsoleApp1
                     for (int k = 1; k <= e; k++)
                     {
                         if (k == 1)
-                            Console.Write("*");
+                            Console.Write("1");
                         else if (k == e)
-                            Console.Write("*");
+                            Console.Write("2");
                         else
-                            Console.Write(" ");
+                            Console.Write("0");
                     }
                 }
                 x = x + 2;
