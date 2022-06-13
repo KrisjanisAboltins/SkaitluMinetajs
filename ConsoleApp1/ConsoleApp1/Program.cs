@@ -22,6 +22,7 @@ Console.WriteLine("Matrix tev dos mājienu, ja Tavs ievadītais skaitlis ir par 
 Console.WriteLine("Lūdzu seko tam, cik mēģinājumi Tev ir atlikuši!");
 
 
+
 string player = Player.GetPlayerName();
 
 

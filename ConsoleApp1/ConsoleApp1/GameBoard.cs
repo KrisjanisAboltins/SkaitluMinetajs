@@ -58,15 +58,21 @@ namespace ConsoleApp1
                 $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, Tu minēji {guessCount} reizes un TU UZMINĒJI!");
                 Console.ResetColor();
             }
+           Start11:
             Console.WriteLine("Vēlies atkārtot 1.līmeņa spēli (ja/ne): ");
             string result = Console.ReadLine();
 
             if (result == "ne") ;
+            else if (result == "ja")
+            {
+                goto Start1;
+            }
+            else
+            {
+                goto Start11;
+            }
 
-
-            else goto Start1;
             Console.Clear();
-
 
         }
 
@@ -119,17 +125,24 @@ namespace ConsoleApp1
                     else if (guess1to10 > randomNumber1to10) Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir mazāks, mēģini vēlrez ierakstīt savu skaitli");
                     else Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir lielāks, mēģini vēlrez ierakstīt savu skaitli");
                 }
-                Console.WriteLine("Vēlies atkārtot 2.līmeņa spēli (ja/ne): ");
-                string result2 = Console.ReadLine();
+            Start22:
+                Console.WriteLine("Vēlies atkārtot 1.līmeņa spēli (ja/ne): ");
+                string result = Console.ReadLine();
 
-                if (result2 == "ne") ;
+                if (result == "ne") ;
+                else if (result == "ja")
+                {
+                    goto Start2;
+                }
+                else
+                {
+                    goto Start22;
+                }
 
-                else goto Start2;
                 Console.Clear();
             }
             
         }
-
 
 
 
@@ -181,17 +194,22 @@ namespace ConsoleApp1
                     else Console.WriteLine($"Es Tev nedaudz palīdzēšu, Mans skaitlis ir lielāks, " +
                         $"to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}, mēģini vēlrez ierakstīt savu skaitli");
                 }
-            Console.WriteLine("Vēlies atkārtot 2.līmeņa spēli (ja/ne): ");
-            string result3 = Console.ReadLine();
+        Start33:
+            Console.WriteLine("Vēlies atkārtot 1.līmeņa spēli (ja/ne): ");
+            string result = Console.ReadLine();
 
-            if (result3 == "ne") ;
+            if (result == "ne") ;
+            else if (result == "ja")
+            {
+                goto Start3;
+            }
+            else
+            {
+                goto Start33;
+            }
 
-
-            else goto Start3;
-            Console.Clear();
-        }
-
-               
+         }
+              
     }
 
 }
