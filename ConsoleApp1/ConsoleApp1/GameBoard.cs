@@ -21,11 +21,14 @@ namespace ConsoleApp1
         {
         Start1:
             Random random1 = new Random();
-            int randSecretNumber1 = random1.Next(1, 6);
+            int secretNumber1 = random1.Next(1, 6);
 
-            string secretNumber1 = randSecretNumber1.ToString();
-            string guess = "";
+            int guess = -1;
             int guessCount = 0;
+           
+
+
+
 
             EnumLevel countLimit1 = EnumLevel.guessCountLimit;
             int countLimit1Value = (int)countLimit1;
@@ -34,12 +37,13 @@ namespace ConsoleApp1
             bool reachedguessCountLimit = false;
 
 
+
             while (guess != secretNumber1 && !reachedguessCountLimit)
             {
                 if (guessCount < countLimit1Value)
                 {
                     Console.WriteLine($"Lūdzu, ieraksti savu skaitli no 1 līdz 5, ja nebūs pareizi būs jāraksta vēl :)");
-                    guess = Console.ReadLine();
+                    guess = Tools.InputNumber(1, 5);
                     guessCount++;
                 }
                 else reachedguessCountLimit = true;
@@ -86,13 +90,16 @@ namespace ConsoleApp1
                 Random random2 = new Random();
                 int randomNumber1to10 = random2.Next(1, 11);
                 int guess1to10;
+     
+                
 
                 EnumLevel countLimit2 = EnumLevel.guessCountLimit1to10;
                 int countLimit2Value = (int)countLimit2;
 
                 //int guessCountLimit1to10 = 5;
-                
                 bool reachedguessCountLimit1to10 = false;
+
+
 
                 Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 10");
             
@@ -100,7 +107,7 @@ namespace ConsoleApp1
 
                 while (reachedguessCountLimit1to10 == false)
                 {
-                    guess1to10 = int.Parse(Console.ReadLine());
+                    guess1to10 = Tools.InputNumber(1, 10);
                     countLimit2Value--;
 
                     if (guess1to10 == randomNumber1to10)
@@ -153,8 +160,8 @@ namespace ConsoleApp1
             Random random3 = new Random();
             int randSecretNumber3 = random3.Next(1, 501);
             int guess1to20;
-
-
+            
+        
             EnumLevel countLimit3 = EnumLevel.guessCountLimit1to20;
             int countLimit3Value = (int)countLimit3;
 
@@ -170,10 +177,10 @@ namespace ConsoleApp1
             
                 while (reachedguessCountLimit1to20 == false)
                 {
-                    guess1to20 = int.Parse(Console.ReadLine());
+                    guess1to20 = Tools.InputNumber(1, 500);
                     countLimit3Value--;
 
-                    if (guess1to20 == randSecretNumber3)
+                if (guess1to20 == randSecretNumber3)
                     {
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.WriteLine($":):):) " +
