@@ -23,9 +23,6 @@ Console.WriteLine("Lūdzu seko tam, cik mēģinājumi Tev ir atlikuši!");
 
 
 
-string player = Player.GetPlayerName();
-
-
 Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine();
 Console.WriteLine("================================================================================");
@@ -35,11 +32,25 @@ Console.ResetColor();
 
 ConsoleApp1.GameBoard board = new GameBoard();
 
-
 Console.WriteLine(board.GameBoardGreeting());
 
 Console.WriteLine(board.GameBoardGreeting2());
 
+string player = Player.GetPlayerName();
+GameLevel level = Player.GetPlayerLevel();
+
+if (level == GameLevel.Low) 
+{
+    board.Game_1Board();
+}
+if (level == GameLevel.Medium)
+{
+    board.Game_2Board();
+}
+if (level == GameLevel.High)
+{
+    board.Game_3Board();
+}
 
 board.Game_1Board();
 

@@ -17,12 +17,25 @@ namespace ConsoleApp1
             Console.WriteLine($"Prieks iepazīties, {player}!");
             return player;
         }
+        GameLevel viegls = GameLevel.Low;
+        GameLevel videjs = GameLevel.Medium;  
+        GameLevel gruts = GameLevel.High;
         
-        public void CountAttempts() 
+        public static GameLevel GetPlayerLevel()        
         {
-            //Console.WriteLine($"Paldies par spēli. Tu minēji {guessCount} reizes."); 
+            while (true) 
+            {
+                Console.WriteLine("Izvēlies spēles grūtības līmeni: 1 - viegls, 2 - vidējs, 3 - grūts");
+                string levelS = Console.ReadLine();  
+                int level = int.Parse(levelS);
+                if (level > 0 && level < 4)
+                {
+                    return (GameLevel)level;
+                }
+            }
+        }       
             
-        }
+        
     }
 
 }
