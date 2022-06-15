@@ -52,5 +52,9 @@ Krišjānis - GameBoard klase - spēles loģika + apvienot
 
 Mājas darbs unit tests gala darbam, kā min notestēstēt konstantes vērtību (ideāli Game boardā funkcija (piem. atgriež tekstu)).
 
+update 15 jūnijs
+  punktu skatīšana (spēles līmeņi) 
+  vai arī ierobežot minēšanas laiku
+
 
 
