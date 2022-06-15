@@ -161,7 +161,7 @@ namespace ConsoleApp1
 
         public void Game_3Board()
         {
-            Console.WriteLine($"3.līmenis, šoreiz grūtāks!");
+            Console.WriteLine($"3.līmenis!");
         Start3:
             Random random3 = new Random();
             int randSecretNumber3 = random3.Next(1, 501);
@@ -220,8 +220,9 @@ namespace ConsoleApp1
             else if (result3 == "ne")
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("GAME OVER");
+                Console.WriteLine("Spēles beigas!!!");
                 Console.ResetColor();
+                Console.WriteLine("Ja vēlies sākt no 1. līmeņa spied Enter!");
             }
             else
             {
