@@ -12,7 +12,7 @@ namespace ConsoleApp1
 
         public static string GetPlayerName()
         {
-            Console.WriteLine("Sākam! Lūdzu ieraksti savu vārdu");
+            Console.WriteLine("Lūdzu ieraksti savu vārdu");
             string player = Tools.InputString();
             Console.WriteLine($"Prieks iepazīties, {player}!");
             return player;

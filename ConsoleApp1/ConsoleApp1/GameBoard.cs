@@ -87,7 +87,7 @@ namespace ConsoleApp1
         {
 
 
-            Console.WriteLine("Nākamais 2.līmenis");
+            Console.WriteLine("2.līmenis");
             {
             Start2:
                 Random random2 = new Random();
@@ -161,7 +161,7 @@ namespace ConsoleApp1
 
         public void Game_3Board()
         {
-            Console.WriteLine($"Nākamais 3.līmenis, šoreiz grūtāks!");
+            Console.WriteLine($"3.līmenis, šoreiz grūtāks!");
         Start3:
             Random random3 = new Random();
             int randSecretNumber3 = random3.Next(1, 501);
