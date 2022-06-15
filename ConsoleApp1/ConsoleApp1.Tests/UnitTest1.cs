@@ -8,12 +8,12 @@ namespace ConsoleApp1.Tests
         public void IsItRightGamneName()
         {
             //Arange
-            string v = "Matrix Skaitļu Minētājs";
+            string v = "MATRIX SKAITĻU MINĒTĀJS";
             //Act
             string configuration = Configuration.GameName;
            
             //Assert
-            Assert.Equal ("Matrix Skaitļu Minētājs", Configuration.GameName);
+            Assert.Equal ("MATRIX SKAITĻU MINĒTĀJS", Configuration.GameName);
         }
 
        

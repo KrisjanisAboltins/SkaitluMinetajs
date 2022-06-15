@@ -8,7 +8,9 @@ namespace ConsoleApp1
 {
     public class Rules
     {
-        public string GameRules { get; set; }   
+        public string gamerules = "Šī ir mācību nolūkos izveidotā skaitļu minēšanas spēle ar 3 grūtības līmeņiem. Matrix ir izvēlējies skaitli un Tavs uzdevums ir to atminēt. 1.līmenī tu drīskti minēt 3 reizes, 2.līmenī - 5 reizes, bet 3.līmenī 7 reizes.  Matrix tev dos mājienu, ja Tavs ievadītais skaitlis ir par lielu vai par mazu. Lūdzu seko tam, cik mēģinājumi Tev ir atlikuši! ";
+
+        public string GameRules() { return gamerules; }
 
         public void Greeting ()
         {
@@ -49,8 +51,7 @@ namespace ConsoleApp1
                 Console.WriteLine();
             }
         }
-
-
+        
 
     }
 }

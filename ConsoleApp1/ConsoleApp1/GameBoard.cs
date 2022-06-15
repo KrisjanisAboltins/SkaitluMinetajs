@@ -25,8 +25,6 @@ namespace ConsoleApp1
 
             int guess = -1;
             int guessCount = 0;
-           
-
 
 
 
@@ -62,12 +60,16 @@ namespace ConsoleApp1
                 $"Tu ierakstīji skaitli {secretNumber1}, skaitlis ir pareizs, Tu minēji {guessCount} reizes un TU UZMINĒJI!");
                 Console.ResetColor();
             }
-           Start11:
+        Start11:
             Console.WriteLine("Vēlies atkārtot 1.līmeņa spēli (ja/ne): ");
-            string result = Console.ReadLine();
+            string result1 = Console.ReadLine();
 
-            if (result == "ne") ;
-            else if (result == "ja")
+            if (result1 == "ne")
+            {
+                Game_2Board();
+            }
+
+            else if (result1 == "ja")
             {
                 goto Start1;
             }
@@ -76,13 +78,14 @@ namespace ConsoleApp1
                 goto Start11;
             }
 
+
             Console.Clear();
 
         }
 
         public void Game_2Board()
         {
-        
+
 
             Console.WriteLine("Nākamais 2.līmenis");
             {
@@ -90,8 +93,8 @@ namespace ConsoleApp1
                 Random random2 = new Random();
                 int randomNumber1to10 = random2.Next(1, 11);
                 int guess1to10;
-     
-                
+
+
 
                 EnumLevel countLimit2 = EnumLevel.guessCountLimit1to10;
                 int countLimit2Value = (int)countLimit2;
@@ -102,7 +105,7 @@ namespace ConsoleApp1
 
 
                 Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 10");
-            
+
                 Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, Tev ir {countLimit2Value} iespējas");
 
                 while (reachedguessCountLimit1to10 == false)
@@ -133,11 +136,14 @@ namespace ConsoleApp1
                     else Console.WriteLine("Es Tev nedaudz palīdzēšu, mans skaitlis ir lielāks, mēģini vēlrez ierakstīt savu skaitli");
                 }
             Start22:
-                Console.WriteLine("Vēlies atkārtot 1.līmeņa spēli (ja/ne): ");
-                string result = Console.ReadLine();
+                Console.WriteLine("Vēlies atkārtot 2.līmeņa spēli (ja/ne): ");
+                string result2 = Console.ReadLine();
 
-                if (result == "ne") ;
-                else if (result == "ja")
+                if (result2 == "ne")
+                {
+                    Game_3Board();
+                }
+                else if (result2 == "ja")
                 {
                     goto Start2;
                 }
@@ -148,20 +154,20 @@ namespace ConsoleApp1
 
                 Console.Clear();
             }
-            
+
         }
 
 
 
-        public void Game_3Board() 
+        public void Game_3Board()
         {
             Console.WriteLine($"Nākamais 3.līmenis, šoreiz grūtāks!");
-            Start3:
+        Start3:
             Random random3 = new Random();
             int randSecretNumber3 = random3.Next(1, 501);
             int guess1to20;
-            
-        
+
+
             EnumLevel countLimit3 = EnumLevel.guessCountLimit1to20;
             int countLimit3Value = (int)countLimit3;
 
@@ -174,14 +180,14 @@ namespace ConsoleApp1
 
             Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 500, bet es Tev nedaudz palīdzēšu");
             Console.WriteLine($"Lūdzu, ieraksti veselu skaitli, Tev ir {countLimit3Value} iespējas");
-            
-                while (reachedguessCountLimit1to20 == false)
-                {
-                    guess1to20 = Tools.InputNumber(1, 500);
-                    countLimit3Value--;
+
+            while (reachedguessCountLimit1to20 == false)
+            {
+                guess1to20 = Tools.InputNumber(1, 500);
+                countLimit3Value--;
 
                 if (guess1to20 == randSecretNumber3)
-                    {
+                {
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.WriteLine($":):):) " +
                     $"Tu ierakstīji skaitli {randSecretNumber3}, skaitlis ir pareizs, TU UZMINĒJI!");
@@ -198,27 +204,36 @@ namespace ConsoleApp1
                 else if (guess1to20 > randSecretNumber3) Console.WriteLine($"Es Tev nedaudz palīdzēšu, Mans skaitlis ir mazāks, " +
                         $"to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}, mēģini vēlrez ierakstīt savu skaitli");
 
-                    else Console.WriteLine($"Es Tev nedaudz palīdzēšu, Mans skaitlis ir lielāks, " +
-                        $"to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}, mēģini vēlrez ierakstīt savu skaitli");
-                }
-        Start33:
-            Console.WriteLine("Vēlies atkārtot 1.līmeņa spēli (ja/ne): ");
-            string result = Console.ReadLine();
+                else Console.WriteLine($"Es Tev nedaudz palīdzēšu, Mans skaitlis ir lielāks, " +
+                    $"to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}, mēģini vēlrez ierakstīt savu skaitli");
+            }
+            Start33:
+            Console.WriteLine("Vēlies atkārtot 3.līmeņa spēli (ja/ne): ");
+            string result3 = Console.ReadLine();
 
-            if (result == "ne") ;
-            else if (result == "ja")
+            if (result3 == "ja")
             {
                 goto Start3;
+
+            }
+
+            else if (result3 == "ne")
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("GAME OVER");
+                Console.ResetColor();
             }
             else
             {
                 goto Start33;
             }
+            Console.Read();
 
-         }
-              
+        }
+        
     }
-
+    
 }
+
 
 
