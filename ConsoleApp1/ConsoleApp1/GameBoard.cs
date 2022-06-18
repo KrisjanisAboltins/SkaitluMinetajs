@@ -16,8 +16,12 @@ namespace ConsoleApp1
         public string greeting2 = "Veiksmi!";
         public string GameBoardGreeting2() { return greeting2; }
 
-
+        string player = Player.GetPlayerName();
+        public string PlayerName() { return player; }   
+         
         public void Game_1Board()
+
+       
         {
         Start1:
             Random random1 = new Random();
@@ -79,21 +83,18 @@ namespace ConsoleApp1
             }
 
 
-            Console.Clear();
-
         }
 
         public void Game_2Board()
         {
-
+        Start2:
 
             Console.WriteLine("2.līmenis");
             {
-            Start2:
+            
                 Random random2 = new Random();
                 int randomNumber1to10 = random2.Next(1, 11);
                 int guess1to10;
-
 
 
                 EnumLevel countLimit2 = EnumLevel.guessCountLimit1to10;
@@ -101,7 +102,6 @@ namespace ConsoleApp1
 
                 //int guessCountLimit1to10 = 5;
                 bool reachedguessCountLimit1to10 = false;
-
 
 
                 Console.WriteLine("Es iedomājos veselu skaitli no 1 līdz 10");
@@ -152,7 +152,6 @@ namespace ConsoleApp1
                     goto Start22;
                 }
 
-                Console.Clear();
             }
 
         }
@@ -207,7 +206,7 @@ namespace ConsoleApp1
                 else Console.WriteLine($"Es Tev nedaudz palīdzēšu, Mans skaitlis ir lielāks, " +
                     $"to dalot uz 7 sanāk {advice1} bet pāri paliek {advice2}, mēģini vēlrez ierakstīt savu skaitli");
             }
-            Start33:
+        Start33:
             Console.WriteLine("Vēlies atkārtot 3.līmeņa spēli (ja/ne): ");
             string result3 = Console.ReadLine();
 
@@ -222,18 +221,22 @@ namespace ConsoleApp1
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Spēles beigas!!!");
                 Console.ResetColor();
-                Console.WriteLine("Ja vēlies sākt no 1. līmeņa spied Enter!");
+
             }
             else
             {
                 goto Start33;
             }
-            Console.Read();
+            Console.WriteLine($"{player}, paldies par spēli :)");
+            Console.WriteLine("Ja vēlies sākt no 1. līmeņa spied Enter!");
+            Console.ReadLine();    
+            Console.Beep();
+            Console.Beep();
+
 
         }
         
     }
-    
 }
 
 
